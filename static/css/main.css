@@ -1,0 +1,163 @@
+
+
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.content {
+    margin: 0 auto;
+    width: 90%; 
+    padding: 20px; 
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    height: -70;
+}
+
+table, th, td {
+    border: 2px solid #aaa;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    height: 40px;
+    background-color: azure;
+}
+
+#editar, #deletar {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#editar {
+    color: orange;
+    background-color: #ffe8cc;
+}
+
+#deletar {
+    color: red;
+    background-color: #ffcccc;
+}
+
+.form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#servico, #data_agendamento, #cliente_nome, #Adicionar, #hours {
+    width: 60%; 
+    max-width: 200px; 
+    margin-bottom: 10px;
+    
+}
+.tabela{
+    position: relative;
+    left: 5%;
+}
+
+
+
+.form input, .form select {
+    display: block;
+    margin: 0 auto;
+}
+
+
+#Adicionar {
+    display: block;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#Adicionar:hover {
+    background-color: #45a049;
+}
+
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-button, .delete-button {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.edit-button {
+    background-color: orange;
+    margin-right: -20px;
+}
+
+.delete-button {
+    background-color: red;
+}
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.menu h1::before {
+    
+    margin-right: 10px;
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu a:hover {
+    color: #ddd;
+}

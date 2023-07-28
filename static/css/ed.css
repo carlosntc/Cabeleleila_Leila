@@ -1,0 +1,52 @@
+body{
+    background-color: sans-serif;
+}
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.menu h1::before {
+    
+    margin-right: 10px;
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu a:hover {
+    color: #ddd;
+}
+#Editar {
+    display: block;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#Adicionar:hover {
+    background-color: #45a049;
+}
+#servico_editar, #data_agendamento_editar, #cliente_nome_editar, #Adicionar{
+    width: 60%; 
+    max-width: 200px; 
+    margin-bottom: 10px;
+}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Cabeleleila Leila Salão de Beleiza</title>
+{% endblock %}
+
+{% block body %}
+<header class="menu">
+<h1 style="text-align: center">📅&nbsp;&nbsp;&nbsp;&nbsp; Agendamento - Cabeleleila Leila Salão de Beleiza</h1>
+</header>
+<div class="form">
+    <form action="/" method="POST">
+
+        <input type="text" name="cliente_nome" id="cliente_nome" placeholder="Nome do Cliente" required><br>
+        <input type="datetime-local" name="data_agendamento" id="data_agendamento" min="2023-01-01" max="2023-12-31" required><br>
+        
+        <select name="servico" id="servico" placeholder="Serviço" required><br><br>
+            <option value="" disabled selected>Serviços..</option>
+            <option value="Cabelo">Cabelo</option>
+            <option value="Luzes">Luzes</option>
+            <option value="Manicure">Manicure</option>
+            <option value="Maquiagem">Maquiagem</option>
+            <option value="Pedicure">Pedicure</option>
+            <option value="Progressiva">Progressiva</option>
+            
+        </select>
+        <br><br>
+        <input type="submit" id="Adicionar" value="Adicionar">
+    </form>
+    <br><br>
+</div>
+
+<div class="servico">
+    {% if todos_serviços|length < 1 %}
+    <h4 style="text-align: center">📈 Não á Serviços Agendados!</h4>
+    {% else %}
+    <table class="tabela">
+        <tr>
+            <th>Cliente</th></tg>
+            <th>Serviço</th>
+            <th>Data de Criação</th>
+            <th>Agendamento</th>
+            <th>📋</th>
+        </tr>
+        {% for servico in todos_serviços %}
+            <tr>
+                <td>{{ servico.nome_cliente }}</td>
+                <td>{{ servico.servico_banco }}</td>
+                <td>{{ servico.data_criacao.date() }}</td>
+                <td>{{ servico.data_agendamento}}</td>
+                <td>
+                    <div class="button-container">
+                        <a class="edit-button" href="/editar/{{servico.id}}">✏️Editar</a>
+                        <a class="delete-button" href="/deletar/{{servico.id}}">❌Deletar</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</div>
+{% endblock %}

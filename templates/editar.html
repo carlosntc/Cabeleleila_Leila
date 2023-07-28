@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Cabeleleila Leila Salão de Beleiza</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ed.css') }}">
+{% endblock %}
+
+{% block body %}
+<header class="menu">
+    <h1 style="text-align: center">Editar Serviços</h1>
+</header>
+<div class="content">
+    <div class="form">
+        <form action="/editar/{{todos_serviços.id}}" method="POST">
+            <input type="text" name="cliente_nome_editar" id="cliente_nome_editar" value="{{todos_serviços.nome_cliente}}">
+            <input type="datetime-local" name="data_agendamento_editar" id="data_agendamento_editar" value="{{todos_serviços.data_agendamento}}">
+            <select name="servico_editar" id="servico_editar" placeholder="Serviço" required><br><br>
+                <option value="" disabled selected>Serviços..</option>
+                <option value="Cabelo">Cabelo</option>
+                <option value="Luzes">Luzes</option>
+                <option value="Manicure">Manicure</option>
+                <option value="Maquiagem">Maquiagem</option>
+                <option value="Pedicure">Pedicure</option>
+                <option value="Progressiva">Progressiva</option>
+                
+            </select>
+            <input type="submit" value="Editar" id="Editar">
+        </form>
+    </div>
+</div>
+{% endblock %}
