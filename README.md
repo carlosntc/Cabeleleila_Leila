@@ -1,4 +1,6 @@
 # Cabeleleila_Leila
+<img src = "imagens/sql2.png">
+<img src = "imagens/python.png">
 <h4>Como Instalar:</h4><br>
 <img src = "imagens/1.png">
 <img src = "imagens/2.png">
